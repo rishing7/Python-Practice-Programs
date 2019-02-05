@@ -1,0 +1,69 @@
+If any unwanted errors occurs then just need to handle, this is all about the exception handling.
+Exception handling gives that right to a program is terminate normally if any exception occurs.
+
+There are five keywords:
+1. try
+2. except
+3. else
+4. finally
+5. raise
+
+####################################################
+
+try:
+    """ Statements"""
+
+except:
+    """ Statements"""
+
+else:
+    """ Statements"""
+
+
+####################################################
+
+If any exception occurs in try block then except block gets executed otherwise else block gets executed.
+If try block has exception but in except block it doesn't match with the mentioned exception then abnormal
+termination takes place without executing the else block code.
+
+#####################################################
+
+Corresponding to a try block multiple except block can be there. According to try block exception except blocks are executed
+if exception doesn't match with any one of the mentioned exception then default except block gets executed else, else block executed
+
+try:
+    a = 10/0    # Arithmetic Error
+    print("rishi"+10)  # Type Error
+except(ArithmeticError as ae):
+    print(ae)
+except(TypeError as te):
+    print(te)
+except:     # Default Except block
+    """ Default except block """
+else:
+    """ If there is no exception found in try block!!!"""
+
+Let's say Arithmetic Error occurs in try block then remaining statements doesn't get executed in try block i.e once control
+gets out from the try block it doesn't get returned.
+
+Note: BaseException is root exception for entire exception errors.
+
+##############################################
+4. finally
+
+Just before the normal and abnormal termination always finally block code executed.
+
+Note: Resource releasing code must be written in this block.
+
+There are two cases where finally block code doesn't get executed.
+
+If control is not entering into try block then finally block is executed.
+
+E.g
+print(10+ 'rishi')
+try:
+    ...
+finally:
+    ...
+
+In this case control isn't entering in try block.
