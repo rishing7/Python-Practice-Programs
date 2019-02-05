@@ -1,0 +1,97 @@
+Request is raised by the browser i. google chrome, safari etc...
+There is a computer somewhere on internet receiving the request
+
+That computer has something like flask application.
+i.e Flask application receives a request from browser and decide what to do with it and then return response.
+
+Server i.e Flask application must be able to understand that what kind of request is coming.
+
+flask is package and Flask is class.
+
+##########
+HTTP Verbs
+##########
+
+What is web-server?
+It is a piece of Hardware(e.g computer) and Software designed to accept incoming we request.
+For example, Google has many web servers.
+This course is all about creating web server i.e a Flask App.
+
+What do we send?
+When you go to http://www.google.com, you send the following:
+GET / HTTP/1.1      >> GET request which is verb, / is a path, HTTP/1.1 protocol
+Host: www.google.com
+Server may give :
+1. error: if /(path) is not found.
+2. error: if HTTP is not supported (SMTP, FTP)
+3. error: if server is unavailable
+4. may give html code back
+5. may give you some text back
+___________________________
+
+GET /login HTTP/1.1
+Host: https://twitter.com
+
+GET /download/mac HTTP/1.1
+Host: https://git-scm.com
+
+ GET / HTTP/1.1
+Host: www.google.com.uk
+
+_________________________
+Going to web page always get GET request.
+HTTP Verbs
+GET: Retrieve something
+POST: Receive data and use it
+PUT: Make sure something is there
+DELETE: Remove something
+
+##################
+HTTP Principles
+#################
+Going to a site does a GET request.
+
+REST API?
+Is a way of thinking about how a web server responds to your request.
+It doesn't respond with just data
+It responds with resources
+
+Resources?
+Let's say our server is designed to accept following request.
+e.g GET /item/chair
+    POST /item/chair/   with extra data
+    PUT /item/chair     with extra data
+    DELETE /item/chair
+
+    GET /items      Retrieving multiple items
+
+ REST API feature Stateless
+ One request can't depend on any other request.
+
+ For e.g
+ POST /item/chair   creates an item
+ Server doesn't know the item exist after even creating a item
+################
+JSON: is used to transfer data from one application to another.
+This is not dictionary in python its a text.
+
+########################
+pip install virtualenv venv
+pip freeze all the version in virtual environment
+Activation: $ ./venv/scripts/activate.bat
+############# JWT ############
+
+Json Web token : gonna encoding some data.
+E.g I wanna send you a private message so the no one can see it so we gonna encode it unless they don't have the token.
+decryption key.
+
+
+#################### Documentation ###################
+Model - Our internal entity
+Resources - API interact with
+
+
+############# SQLALCHEMY #################
+Helps to create table, no need to establish connection, cursor to be created
+Builtin queries are used for database.
+section 6 explains all.
